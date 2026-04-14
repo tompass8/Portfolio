@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Newyork';
+    src: url('fonts/NewYork\ PERSONAL\ USE.otf') format('opentype'); /* Assure-toi que le nom du fichier correspond exactement au tien ! */
+    font-weight: normal;
+    font-style: normal;
+}/* hero.css */
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0d134f; /* Fond très sombre, presque noir */
+    color: #f4f4f4; /* Texte blanc cassé */
+    line-height: 1.6;
+    overflow-x: hidden;     
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    align-items: center;
+    position: relative;
+    z-index: 10; /* Pour passer au-dessus de la forme si nécessaire */
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* Section Accueil */
+.hero {
+    height: 85vh; /* Légèrement plus haut pour plus d'impact */
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative; /* Indispensable pour positionner la forme par rapport à ce parent */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5; /* Place le texte au-dessus de la forme */
+    max-width: 60%; /* Laisse de l'espace à droite pour la forme */
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 7.5rem); /* Typographie géante adaptable */
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 2rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    opacity: 0.7;
+    max-width: 500px;
+    font-weight: 300;
+}
+
+/* --- LA FORME COLORÉE (New) --- */
+.hero-shape {
+    position: absolute; /* Placement absolu dans le parent .hero */
+    right: -5vw; /* Positionnée à droite, déborde slightly */
+    top: 20%; /* Ajuste la hauteur de la forme */
+    width: 35vw; /* Taille adaptable à la largeur de l'écran */
+    height: 40vh; /* Taille adaptable à la hauteur de l'écran */
+    
+    /* Couleur Cyan Électrique vibrant */
+    background-color: #ddf902; 
+    
+    /* Le secret de la forme "aléatoire" et organique  */
+    border-radius: 60% 40% 70% 30% / 40% 50% 60% 70%;
+    
+    /* Un léger flou pour la douceur */
+    filter: blur(5px);
+    
+    opacity: 0.9; /* Légère transparence pour la profondeur */
+    z-index: 1; /* Place la forme sous le texte */
+}
+
+/* --- ANIMATIONS EXISTANTES --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); /* Animation très douce */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay {
+    transition-delay: 0.25s; /* Un peu plus de délai pour le sous-titre */
+}
+
+/* Adaptation pour Mobiles */
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 100%; /* Le texte prend toute la largeur */
+    }
+    .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem); /* Plus petit sur mobile */
+    }
+    .hero-shape {
+        width: 60vw; /* La forme devient un fond plus diffus */
+        height: 30vh;
+        right: -10vw;
+        top: 30%;
+        opacity: 0.5; /* Plus transparent pour ne pas gêner la lecture */
+        filter: blur(15px);
+    }
+}
+.logo {
+    font-family: 'Newyork', serif; /* Applique la police Artem Nevsky */
+    font-size: 2.5rem; /* Un peu plus grand pour bien voir les détails de cette belle police */
+    color: #dfff28;
+    letter-spacing: 2px;
+    min-width: 250px; /* Un peu plus large pour éviter que ça bouge avec le glitch */
+}
