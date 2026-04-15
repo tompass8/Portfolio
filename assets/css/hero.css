@@ -11,8 +11,8 @@
     z-index: 100; /* On le met à 100 pour être sûr qu'elle passe au-dessus des projets */
 
     /* L'effet Glassmorphism (Verre flouté) */
-    background-color: rgba(13, 19, 79, 0.85); /* Ton fond bleu avec 85% d'opacité */
-    backdrop-filter: blur(12px); /* Floute les éléments qui passent en dessous */
+    background-color: rgba(13, 19, 79, 0.22); /* Ton fond bleu avec 85% d'opacité */
+    backdrop-filter: blur(7px); /* Floute les éléments qui passent en dessous */
     -webkit-backdrop-filter: blur(12px); /* Pour que ça marche aussi sur les appareils Apple */
     
     /* Une ligne ultra fine en bas pour délimiter proprement */
