@@ -1,11 +1,24 @@
+/* --- NAVBAR --- */
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 5%;
+    padding: 1.5rem 5%; /* J'ai légèrement réduit le padding pour que la barre prenne moins de place au scroll */
     align-items: center;
-    position: relative;
-    z-index: 10;
+    
+    /* La magie pour qu'elle te suive */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* On le met à 100 pour être sûr qu'elle passe au-dessus des projets */
+
+    /* L'effet Glassmorphism (Verre flouté) */
+    background-color: rgba(13, 19, 79, 0.85); /* Ton fond bleu avec 85% d'opacité */
+    backdrop-filter: blur(12px); /* Floute les éléments qui passent en dessous */
+    -webkit-backdrop-filter: blur(12px); /* Pour que ça marche aussi sur les appareils Apple */
+    
+    /* Une ligne ultra fine en bas pour délimiter proprement */
+    border-bottom: 1px solid rgba(244, 244, 244, 0.05);
 }
+
 
 .logo {
     font-family: 'Newyork', serif;
