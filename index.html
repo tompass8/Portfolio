@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio Minimaliste</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +24,40 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1 class="reveal">Designer &<br>Développeur.</h1>
+            <h1 class="reveal">Desi<span class="text-yellow">gn</span>er &<br>Développeur.</h1>
             <p class="reveal delay">Je crée des expériences numériques mémorables.</p>
         </div>
 
         <div class="hero-shape"></div>
     </header>
 
-    <script src="hero.js"></script>
+    <section id="work" class="projects-section">
+        <h2 class="section-title reveal">Selected Works.</h2>
+        
+        <div class="projects-grid">
+            <article class="project-card reveal delay">
+                <div class="project-info">
+                    <h3>01 / E-Commerce Redesign</h3>
+                    <p>UX/UI Design & Front-end</p>
+                </div>
+            </article>
+
+            <article class="project-card reveal delay">
+                <div class="project-info">
+                    <h3>02 / Cyberpunk Dashboard</h3>
+                    <p>React, WebGL, 3D</p>
+                </div>
+            </article>
+
+            <article class="project-card reveal delay">
+                <div class="project-info">
+                    <h3>03 / Minimalist App</h3>
+                    <p>Branding & Mobile Design</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

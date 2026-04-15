@@ -19,3 +19,13 @@
 - [ ] Optimisation des performances (Lighthouse score > 95)
 - [ ] Déploiement CI/CD via Vercel ou GitHub Pages
 - [ ] Configuration du nom de domaine personnalisé
+
+
+Tu es actuellement sur develop.
+
+Quand tu voudras attaquer la grille de tes projets, tu créeras une sous-branche à partir de develop :
+git checkout -b feature/grille-projets
+
+Tu fais ton code, tes git add . et git commit.
+
+Quand la fonctionnalité est finie, tu reviens sur develop (git checkout develop) et tu fusionnes (git merge feature/grille-projets).

@@ -17,7 +17,7 @@ const glitchChars = "無明暗幻電網神龍13370X$€@#%&*+<>".split("");
 // Gestion de "l'excitation" du glitch
 let glitchProbability = 0.02; 
 const baseProbability = 0.02;
-const maxProbability = 0.40;  
+const maxProbability = 0.10;  
 
 window.addEventListener("mousemove", () => {
     glitchProbability = maxProbability;

@@ -1,0 +1,17 @@
+:root {
+    --bg-primary: #0d134f;
+    --text-main: #f4f4f4;
+    --accent-yellow: #ddf902;
+    --accent-purple: #ae9cef;
+}
+
+@font-face {
+    font-family: 'Newyork';
+    src: url('../fonts/NewYork\\ PERSONAL\\ USE.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text-yellow {
+    color: var(--accent-yellow);
+}

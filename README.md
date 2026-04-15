@@ -16,4 +16,4 @@ L'objectif est de créer une expérience utilisateur marquante où le contenu re
 3. Lancer via l'extension **Live Server**.
 
 ## 🗺️ Roadmap
-Voir le fichier [ROADMAP.md](./ROADMAP.md) pour le suivi des fonctionnalités et les prochaines étapes.
+Voir le fichier [ROADMAP.md](./ROADMAP.md) pour le suivi des fonctionnalités et les prochaines étapes.      
