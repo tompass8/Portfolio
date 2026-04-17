@@ -1,8 +1,8 @@
 :root {
-    --bg-primary: #0d134f;
-    --text-main: #f4f4f4;
-    --accent-yellow: #ddf902;
-    --accent-purple: #ae9cef;
+    --bg-primary: #F5F2EB;
+    --text-main: #0B162C;
+    --accent-blue: #005BB5;
+    --accent-grey: #5C6B7D;   
 }
 
 @font-face {
@@ -12,6 +12,6 @@
     font-style: normal;
 }
 
-.text-yellow {
-    color: var(--accent-yellow);
+.text-blue {
+    color: var(--accent-blue);
 }

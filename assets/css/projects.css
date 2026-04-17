@@ -1,5 +1,7 @@
 .projects-section {
-    padding: 5rem 5%;
+    padding: 8rem 5% 4rem; /* Un peu plus d'espace en haut */
+    margin-bottom: 70vh; /* Crée un grand vide avant la section suivante */
+
 }
 
 .section-title {

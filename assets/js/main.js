@@ -44,3 +44,42 @@ setInterval(() => {
         glitchProbability -= 0.07; 
     }
 }, 70);
+document.addEventListener("DOMContentLoaded", () => {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryTitle = document.querySelector('.gallery-title');
+    const wrapper = document.querySelector('.gallery-scroll-wrapper');
+
+    window.addEventListener('scroll', () => {
+        const rect = wrapper.getBoundingClientRect();
+        
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            // Progression du scroll (0 à 1)
+            const scrollPercent = Math.min(1, Math.max(0, -rect.top / (wrapper.offsetHeight - window.innerHeight)));
+            
+            // Animation des Tableaux
+            galleryItems.forEach(item => {
+                const speedY = parseFloat(item.getAttribute('data-speed-y')) || 0;
+                const speedScale = parseFloat(item.getAttribute('data-speed-scale')) || 0;
+                
+                const moveY = scrollPercent * speedY;
+                const scale = 1 + (scrollPercent * speedScale);
+                
+                item.style.transform = `translateY(${moveY}px) scale(${scale})`;
+            });
+
+            // Animation du Titre (Mouvement vers le centre)
+            if (galleryTitle) {
+                const speedX = parseFloat(galleryTitle.getAttribute('data-speed-x'));
+                const speedY = parseFloat(galleryTitle.getAttribute('data-speed-y'));
+                const speedScale = parseFloat(galleryTitle.getAttribute('data-speed-scale'));
+
+                const moveX = scrollPercent * speedX; // Déplacement vers la droite
+                const moveY = scrollPercent * speedY; // Déplacement vers le bas
+                const scale = 1 + (scrollPercent * (speedScale - 1));
+
+                galleryTitle.style.transform = `translate(${moveX}vw, ${moveY}vh) scale(${scale})`;
+                galleryTitle.style.opacity = 0.15 + (scrollPercent * 0.35); // Il devient un peu plus visible
+            }
+        }
+    });
+}); 
